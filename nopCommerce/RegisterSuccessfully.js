@@ -12,7 +12,6 @@ describe('Test the registeration function', function () {
         // Access to Home page commercial
         browser.driver.manage().window().maximize();
         browser.get('http://demo.nopcommerce.com/');
-        browser.debugger();
         browser.driver.sleep(2000);
         element(by.xpath("//*[@href='/register']")).click();
 
@@ -26,7 +25,7 @@ describe('Test the registeration function', function () {
         // Fill out Register form
         element(by.id('FirstName')).sendKeys('Steven');
         element(by.id('LastName')).sendKeys('Nguyen');
-        element(by.id('Email')).sendKeys('seven_03092018_06@yopmail.fr');
+        element(by.id('Email')).sendKeys('seven_03092018_07@yopmail.fr');
         element(by.id('Password')).sendKeys('passwd123');
         element(by.id('ConfirmPassword')).sendKeys('passwd123');
         browser.sleep(2000);
@@ -36,7 +35,7 @@ describe('Test the registeration function', function () {
         let msg_registerConfirmation = element(by.xpath("//*[@class='result']"));
         let conditionElement1 = EC.presenceOf(msg_registerConfirmation);
         browser.wait(conditionElement1, 2000);
-        browser.debugger();
+        
         expect(msg_registerConfirmation.getText()).toEqual('Your registration completed');
 
         //Take a screenshot

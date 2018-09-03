@@ -8,8 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "C:/Users/Admin/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
-            "args": ["D:/TESTING/Automation/Project/GitHub/Protractor_Project/ProtractorJSS/nopCommerce/Config_test.js"]
+            "program": "C:/Users/StevenNguyen888/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
+            "args": ["D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Config_test.js"]
         }
     ]
 }
