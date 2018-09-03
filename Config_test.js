@@ -2,16 +2,17 @@ exports.config = {
     framework: 'jasmine',
     directConnect: 'true',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['Test_B_ValidationOfTitle.js'],
-//    multiCapabilities: [{
-//        browserName: 'firefox'
-//    }, {
-//        browserName: 'chrome'
-//    }]
-    capabilities:{
-        browserName:'firefox'
+    specs: ['Login.js'],
+    //    multiCapabilities: [{
+    //        browserName: 'firefox'
+    //    }, {
+    //        browserName: 'chrome'
+    //    }]
+    capabilities: {
+        browserName: 'chrome'
     },
-    onPrepare:() => {
+    onPrepare: () => {
         browser.ignoreSynchronization = true;
+        browser.driver.manage().window().maximize();
     }
 };
