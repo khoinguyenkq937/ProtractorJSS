@@ -1,11 +1,4 @@
-let fs = require('fs');
-
-function writeScreenShot(data, filename) {
-    var stream = fs.createWriteStream(filename);
-
-    stream.write(new Buffer(data, 'base64'));
-    stream.end();
-}
+const callTakeScreenshot = require('./Utility/takeScreenshot');
 
 describe('Test Login form', function(){
     it('Authenticate failed if user login with invalid account', function(){
@@ -30,7 +23,7 @@ describe('Test Login form', function(){
         expect(error_invalidCredentials.getText()).toContain('No customer account found');
 
         browser.takeScreenshot().then(function (png) {
-            writeScreenShot(png, 'login_Unsuccessfully.png')
+            callTakeScreenshot.writeScreenShot(png, 'login_Unsuccessfully.png')
         })
     })
 })

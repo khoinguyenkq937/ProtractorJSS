@@ -3,8 +3,8 @@ exports.config = {
     directConnect: 'true',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: [
-        'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Authentication/Login_valid_account.js',
-        'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Authentication/Login_with_invalid_account.js'
+        './Authentication/Login_valid_account.js',
+//        './Authentication/Login_with_invalid_account.js'
         ],
 //    multiCapabilities: [{
 //        browserName: 'firefox'
@@ -16,5 +16,6 @@ exports.config = {
     },
     onPrepare:() => {
         browser.ignoreSynchronization = true;
+        global.callTakeScreenshot = require('./takeScreenshot');
     }
 };

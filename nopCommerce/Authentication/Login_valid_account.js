@@ -1,12 +1,3 @@
-let fs = require('fs');
-
-function writeScreenShot(data, filename) {
-    var stream = fs.createWriteStream(filename);
-
-    stream.write(new Buffer(data, 'base64'));
-    stream.end();
-}
-
 describe('Ligin function', function () {
     it('should login with valid account', function () {
         browser.driver.manage().window().maximize();
@@ -24,7 +15,7 @@ describe('Ligin function', function () {
 
         //Take a screenshot if login successfully
         browser.takeScreenshot().then(function (png) {
-            writeScreenShot(png, 'login_successfully.png')
+            callTakeScreenshot.writeScreenShot(png, 'login_successfully.png')
         })
     })
 })
