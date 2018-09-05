@@ -2,7 +2,10 @@ exports.config = {
     framework: 'jasmine',
     directConnect: 'true',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Authentication/Login_valid_account.js'],
+    specs: [
+        'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Authentication/Login_valid_account.js',
+        'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Authentication/Login_with_invalid_account.js'
+        ],
 //    multiCapabilities: [{
 //        browserName: 'firefox'
 //    }, {
