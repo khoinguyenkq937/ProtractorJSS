@@ -1,5 +1,3 @@
-const callTakeScreenshot = require('./Utility/takeScreenshot');
-
 describe('Test Login form', function(){
     it('Authenticate failed if user login with invalid account', function(){
         //Access to Login page - Nopcommerce site
