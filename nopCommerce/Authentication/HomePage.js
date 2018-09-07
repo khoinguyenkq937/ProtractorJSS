@@ -7,7 +7,6 @@ let AngularHomePage = function(){
 
     this.openHomePage = function(){
         browser.get('http://demo.nopcommerce.com/');
-        browser.driver.manage().window().maximize();
     };
 
     this.waitForHomePage = function(){

@@ -19,7 +19,7 @@ exports.config = {
     },
         specs: [
         //    './Authentication/Login_valid_account.js',
-            './Authentication/Login_with_invalid_account.js'
+            './Authentication/Login_valid_account.js'
             ],
     //params: require('D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Data/LoginFunction/data_login_valid_account.json'),
     /*
@@ -35,7 +35,7 @@ exports.config = {
         jasmine.getEnv().addReporter(
             new Jasmine2HtmlReporter({
                 savePath : 'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Report',
-                fileName : 'Report',
+                fileName : 'login_valid',
                 takeScreenshots: true,
                 takeScreenshotOnlyFailures : true
             })
