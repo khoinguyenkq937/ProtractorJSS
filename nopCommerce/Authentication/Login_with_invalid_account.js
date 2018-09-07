@@ -20,8 +20,8 @@ describe('Test Login form', function(){
         browser.wait(EC.presenceOf(error_invalidCredentials), 10000);
         expect(error_invalidCredentials.getText()).toContain('No customer account found');
 
-        browser.takeScreenshot().then(function (png) {
-            callTakeScreenshot.writeScreenShot(png, 'login_Unsuccessfully.png')
-        })
+    //    browser.takeScreenshot().then(function (png) {
+    //        callTakeScreenshot.writeScreenShot(png, 'login_Unsuccessfully.png')
+    //    })
     })
 })

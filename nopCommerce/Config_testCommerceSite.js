@@ -1,3 +1,5 @@
+let Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+
 exports.config = {
     framework: 'jasmine',
     directConnect: 'true',
@@ -8,18 +10,35 @@ exports.config = {
     //        browserName: 'chrome'
     //    }]
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        chromeOptions: {
+            args :[
+                '--start-maximized'
+            ]
+        }
     },
-    //    specs: [
-    //        './Authentication/Login_valid_account.js',
-    //        './Authentication/Login_with_invalid_account.js'
-    //        ],
+        specs: [
+        //    './Authentication/Login_valid_account.js',
+            './Authentication/Login_with_invalid_account.js'
+            ],
+    //params: require('D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Data/LoginFunction/data_login_valid_account.json'),
+    /*
     suites: {
         login_valid_account: './Authentication/Login_valid_account.js',
         login_Inalid_account: './Authentication/Login_with_invalid_account.js'
     },
-    onPrepare: () => {
+    */
+    onPrepare: function() {
         browser.ignoreSynchronization = true;
         global.callTakeScreenshot = require('./takeScreenshot');
+
+        jasmine.getEnv().addReporter(
+            new Jasmine2HtmlReporter({
+                savePath : 'D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Report',
+                fileName : 'Report',
+                takeScreenshots: true,
+                takeScreenshotOnlyFailures : true
+            })
+          );
     }
 };

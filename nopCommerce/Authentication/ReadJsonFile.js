@@ -1,12 +1,9 @@
-var fs = require('fs');
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-function readJSON(file) {
-    var request = new XMLHttpRequest();
-    request.open('GET', 'D:/TESTING/Automation/Project/GitHub/Protractor_Project/ProtractorJSS/nopCommerce/Data/LoginFunction/data_login_valid_account.json', false);
-    request.send(null);
-    if (request.status == 200)
-        return request.firstName;
-};
-
-var temp = readJSON('../../data/file.json');
+let const_json = require('D:/Protractor Files/SharingProjectGit/ProtractorJSS/nopCommerce/Data/LoginFunction/data_login_valid_account.json');
+describe('should read the data from json file', function () {
+    it ('shoul abc', function () {
+        let setFirstName = browser.params.Login_accounts.firstName;
+        let URL = browser.params.Login_accounts.url;
+        browser.get(URL);
+        console.log(setFirstName);
+    })
+})
